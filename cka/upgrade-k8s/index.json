@@ -1,0 +1,29 @@
+{
+    "title": "Update Kubernetes from 1.31.0 to 1.31.2",
+    "description": "A step-by-step guide to updating Kubernetes from version 1.31.0 to 1.31.2 in a two-node environment.",
+    "details": {
+        "intro": {
+            "text": "intro.md"
+        },
+        "steps": [
+            {
+                "title": "Check the current Kubernetes version",
+                "text": "step1.md"
+            },
+            {
+                "title": "Update kubeadm",
+                "text": "step2.md"
+            },
+            {
+                "title": "Update the control plane node",
+                "text": "step3.md"
+            }
+        ],
+        "finish": {
+            "text": "finish.md"
+        }
+    },
+    "backend": {
+        "imageid": "kubernetes-kubeadm-2nodes"
+    }
+}
