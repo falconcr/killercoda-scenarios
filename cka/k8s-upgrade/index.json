@@ -17,6 +17,10 @@
             {
                 "title": "Update the control plane node",
                 "text": "step3.md"
+            },
+            {
+                "title": "Update the worker node",
+                "text": "step4.md"
             }
         ],
         "finish": {

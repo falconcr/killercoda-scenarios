@@ -24,7 +24,7 @@ After updating kubeadm, you should also update kubectl and kubelet on your clust
 Prepare the node for maintenance by marking it unschedulable and evicting the workloads:
 
 ```plain
-kubectl drain controlplane --ignore-daemonsets
+kubectl drain node01 --ignore-daemonsets
 ```{{exec}}
 
 Upgrade the kubelet and kubectl:
@@ -42,9 +42,9 @@ sudo systemctl restart kubelet
 
 Bring the node back online by marking it schedulable:
 ```plain
-kubectl uncordon controlplane
+kubectl uncordon node01
 ```
-Verify that the controlplane was updated to 1.31.2:
+Verify that the worker node was updated to 1.31.2:
 
 ```bash
 kubectl get nodes
@@ -53,6 +53,6 @@ kubectl get nodes
 ```bash
 NAME           STATUS   ROLES           AGE    VERSION
 controlplane   Ready    control-plane   6d7h   v1.31.2
-node01         Ready    <none>          6d6h   v1.31.0
+node01         Ready    <none>          6d6h   v1.31.2
 ```
 </details>
