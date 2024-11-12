@@ -6,6 +6,11 @@
         "path": "playground",
         "title": "CKA Playground",
         "description": "a two-node Kubernetes playground environment"
+      },
+      {
+        "path": "k8s-upgrade",
+        "title": "Kubernetes Upgrade Process",
+        "description": "Use kubeadm to upgrade control plane and worker nodes in Kubernetes"
       }
     ]
 }
