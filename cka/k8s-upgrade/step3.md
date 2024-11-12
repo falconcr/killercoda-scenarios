@@ -1,7 +1,8 @@
-In this step, we'll update the control plane node to version 1.31.2.
+You'll take on the task of upgrading the control plane node to Kubernetes version 1.31.2. This upgrade is essential to keep your cluster aligned with the latest features, performance improvements, and security enhancements. By mastering this process, you'll build confidence in maintaining and updating Kubernetes environments.
+
+Your challenge: Update the control plane node to version 1.31.2. This is more than just a version change—it's about ensuring your control plane is resilient and optimized. Are you ready to take on this upgrade and elevate your Kubernetes expertise?
 
 ### Verify the kubeadm version
-kubeadm version
 
 This command checks that your cluster can be upgraded, and fetches the versions you can upgrade to. It also shows a table with the component config version states:
 
@@ -43,12 +44,13 @@ sudo systemctl restart kubelet
 Bring the node back online by marking it schedulable:
 ```plain
 kubectl uncordon controlplane
-```
+```{{exec}}
+
 Verify that the controlplane was updated to 1.31.2:
 
-```bash
+```plain
 kubectl get nodes
-```
+``````{{exec}}
 
 ```bash
 NAME           STATUS   ROLES           AGE    VERSION
