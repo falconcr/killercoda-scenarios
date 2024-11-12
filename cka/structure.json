@@ -1,0 +1,11 @@
+{
+  "title": "CKA Exercises",
+    "description": "Prepare for the CKA by working through these exam-focused exercises.",
+    "items": [
+      {
+        "path": "playground",
+        "title": "CKA Playground",
+        "description": "a two-node Kubernetes playground environment"
+      }
+    ]
+}
