@@ -38,7 +38,7 @@ sudo apt-get update && sudo apt-get install -y kubeadm=1.31.2-1.1
 kubeadm version
 ```{{exec}}
 
-After confirming that `kubeadm` is installed on both nodes, proceed to log out of `node01`.
+After confirming that `kubeadm` is installed and updated on both nodes, proceed to log out of `node01`.
 
 ```plain
 exit

@@ -38,10 +38,11 @@ sudo systemctl daemon-reload
 sudo systemctl restart kubelet
 ```{{exec}}
 
-Comeback to controlplane node and bring the node back online by marking it schedulable:
+Come back to controlplane node and bring the node back online by marking it schedulable:
 ```plain
 kubectl uncordon node01
-```
+```{{exec}}
+
 Verify that the worker node was updated to 1.31.2:
 
 ```bash

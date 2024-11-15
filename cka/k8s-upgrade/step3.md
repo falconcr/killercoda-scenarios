@@ -50,7 +50,7 @@ Verify that the controlplane was updated to 1.31.2:
 
 ```plain
 kubectl get nodes
-``````{{exec}}
+```{{exec}}
 
 ```bash
 NAME           STATUS   ROLES           AGE    VERSION
