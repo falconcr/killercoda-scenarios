@@ -11,6 +11,11 @@
         "path": "k8s-upgrade",
         "title": "Kubernetes Upgrade Process",
         "description": "Use kubeadm to upgrade control plane and worker nodes in Kubernetes"
+      },
+      {
+        "path": "drain-cordon-node",
+        "title": "Kubernetes Node Upgrade Procedure",
+        "description": "The node is experiencing a memory leak and requires maintenance. Disable scheduling and evict the pods."
       }
     ]
 }
