@@ -21,6 +21,11 @@
         "path": "taints-tolerations",
         "title": "Implement Taints and Tolerations on node01 ",
         "description": "Create a taint on node01 and configure a toleration in a pod so that it can be scheduled on that node."
+      },
+      {
+        "path": "restore-backup-etcd",
+        "title": "Backup and Restore the etcd Cluster",
+        "description": "Create a reliable etcd backup and perform a restoration to recover a simulated failed cluster."
       }
     ]
 }

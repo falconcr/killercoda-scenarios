@@ -1,0 +1,37 @@
+{
+    "title": "Backup and Restore the etcd Cluster",
+    "description": "Create a reliable etcd backup and perform a restoration to recover a simulated failed cluster.",
+    "details": {
+        "intro": {
+            "text": "intro.md"
+        },
+        "steps": [
+            {
+                "title": "Verify the etcd Cluster",
+                "text": "step1.md"
+            },
+            {
+                "title": "Backup the etcd Clustern",
+                "text": "step2.md"
+            },
+            {
+                "title": "Simulate a Cluster Failure",
+                "text": "step3.md"
+            },
+            {
+                "title": "Restore the etcd Cluster",
+                "text": "step4.md"
+            },
+            {
+                "title": "Verify the Restored Cluster",
+                "text": "step5.md"
+            }
+        ],
+        "finish": {
+            "text": "finish.md"
+        }
+    },
+    "backend": {
+        "imageid": "kubernetes-kubeadm-2nodes"
+    }
+}
