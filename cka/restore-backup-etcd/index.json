@@ -21,10 +21,6 @@
             {
                 "title": "Restore the etcd Cluster",
                 "text": "step4.md"
-            },
-            {
-                "title": "Verify the Restored Cluster",
-                "text": "step5.md"
             }
         ],
         "finish": {

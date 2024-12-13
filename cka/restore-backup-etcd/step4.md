@@ -68,6 +68,12 @@ Let's see if the _kube-proxy_ daemonset has been restored with the command
 
 `kubectl get ds -n kube-system`
 
+```
+NAME         DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR            AGE
+canal        2         2         2       2            2           kubernetes.io/os=linux   7d7h
+kube-proxy   2         2         2       2            2           kubernetes.io/os=linux   7d7h
+```
+
 YOU ARE MY HERO! ALL IS BACK!
 
 # Final Notes
