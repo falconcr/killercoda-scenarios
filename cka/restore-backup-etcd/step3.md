@@ -1,19 +1,19 @@
 # Simulate a Cluster Failure
 
-Simulate a failure by stopping the etcd pod or deleting its data.
+Now that we have successfully created a valid snapshot of etcd, let's simulate a disaster by modifying the cluster state. 
 
-- Stop the etcd process on the control plane node.
-- Remove the etcd data directory.
-
-<br>
-<details><summary>Solution</summary>
-<br>
+To do this, we’ll delete the `kube-proxy` daemonset located in the `kube-system` namespace:
 
 ```bash
-systemctl stop etcd
+kubectl delete ds kube-proxy -n kube-system
+```
 
-rm -rf /var/lib/etcd
+You can confirm that the `kube-proxy` daemonset has been removed by running:
 
-```{{exec}}
-Warning: Removing the etcd data directory will simulate a complete failure of etcd.
-</details>
+```bash
+kubectl get ds -A
+```
+
+Oh no! The `kube-proxy` daemonset is gone. How do we restore it? Luckily, we have a backup!
+
+Click "Next" to restore the `kube-proxy` daemonset from our snapshot backup.
