@@ -1,6 +1,6 @@
 # Create a StorageClass named log-storage-class
 
-- Create a StorageClass named log-storage-class that uses the `kubernetes.io/host-path provisioner`, it must be saved in the `$HOME/storage-class-exam.yaml` location. 
+- Create a StorageClass named log-storage-class that uses the `rancher.io/local-path`, it must be saved in the `$HOME/storage-class-exam.yaml` location. 
 - Configure the StorageClass to provision volumes in the /data/logs directory.
 
 <br>
@@ -13,7 +13,7 @@ apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
   name: log-storage-class
-provisioner: kubernetes.io/host-path
+provisioner: rancher.io/local-path
 parameters:
   path: "/data/logs"
 EOF
