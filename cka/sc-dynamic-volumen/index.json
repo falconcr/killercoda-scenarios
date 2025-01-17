@@ -1,0 +1,29 @@
+{
+    "title": "Storage Classes and Dynamic Volume Provisioning",
+    "description": "A company requires a dynamically provisioned persistent volume for a web application that stores its logs on a storage backend",
+    "details": {
+        "intro": {
+            "text": "intro.md"
+        },
+        "steps": [
+            {
+                "title": "Create a StorageClass named log-storage-class",
+                "text": "step1.md"
+            },
+            {
+                "title": "Create the PersistentVolumeClaim",
+                "text": "step2.md"
+            },
+            {
+                "title": "Verify if the pod is running on node01",
+                "text": "step3.md"
+            }
+        ],
+        "finish": {
+            "text": "finish.md"
+        }
+    },
+    "backend": {
+        "imageid": "kubernetes-kubeadm-2nodes"
+    }
+}

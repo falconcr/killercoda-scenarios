@@ -26,6 +26,11 @@
         "path": "restore-backup-etcd",
         "title": "Backup and Restore the etcd Cluster",
         "description": "Create a reliable etcd backup and perform a restoration to recover a simulated failed cluster."
+      },
+      {
+        "path": "sc-dynamic-volumen",
+        "title": "Implementing Storage Classes and Dynamic Volume Provisioning",
+        "description": "A company requires a dynamically provisioned persistent volume for a web application that stores its logs on a storage backend" 
       }
     ]
 }
