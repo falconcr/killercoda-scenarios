@@ -1,28 +1,33 @@
-#  Verify the PVC and Dynamic Provisioning
+# Create a pod
+Now that we have created the storageclass and the persistentvolumeclaim resources in Kubernetes, let's create a pod that can use the volume.
 
-Verify that the PVC is bound to a dynamically provisioned PersistentVolume.
+Create a pod named pv-pod that uses the image nginx with a volume named pv-storage . Mount the volume inside the container at /usr/share/nginx/html and specify the pvc by it's name (plog-pvc ).
 
-- Check if the PersistentVolumeClaim is bound:
+After you've created the pod, list all the pods in the default namespace.
+
+<br>
+<details><summary>Solution</summary>
+<br>
 
 ```bash
-kubectl get pvc
+cat <<EOF | k apply -f -
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pv-pod
+spec:
+  containers:
+    - name: pv-container
+      image: nginx
+      volumeMounts:
+        - mountPath: "/usr/share/nginx/html"
+          name: pv-storage
+  volumes:
+    - name: pv-storage
+      persistentVolumeClaim:
+        claimName: log-pvc
+EOF
+
 ```{{exec}}
 
-Example output:
-
-```
-NAME       STATUS   VOLUME        CAPACITY   ACCESS MODES   STORAGECLASS         AGE
-log-pvc    Bound    pvc-12345abc  1Gi        RWO            log-storage-class   10s
-```
-
-- Verify the dynamically provisioned PersistentVolume:
-
-
-`kubectl get pv`
-
-Example output:
-
-```
-NAME          CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM            STORAGECLASS         AGE
-pvc-12345abc  1Gi        RWO            Delete           Bound    default/log-pvc  log-storage-class    10s  
-```   
+</details>
