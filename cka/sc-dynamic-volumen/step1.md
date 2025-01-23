@@ -14,6 +14,7 @@ kind: StorageClass
 metadata:
   name: log-storage-class
 provisioner: rancher.io/local-path
+volumeBindingMode: WaitForFirstConsumer
 parameters:
   path: "/data/logs"
 EOF
